@@ -77,7 +77,8 @@ namespace MoviesApp.Controllers
            
             if (categoryId != updatedCategory.Id)
             {
-                return BadRequest(ModelState);
+                var message = "Please enter same Id";
+                return BadRequest(message);
             }
 
             try
@@ -87,6 +88,7 @@ namespace MoviesApp.Controllers
             }
             catch (Exception ex)
             {
+              
                 return BadRequest(ex.Message);
             }
            

@@ -25,7 +25,7 @@ namespace Busines.Implementation
         {
             var category = _categoryRepository.GetCategories()
                .Where(c => c.Name.Trim().ToUpper() == createCategory.Name.TrimEnd().ToUpper())
-               .FirstOrDefault() ?? throw new Exception("you did not create any category");
+               .FirstOrDefault();
 
             var categoryMap = _mapper.Map<Category>(createCategory);
             
