@@ -1,5 +1,6 @@
-﻿using AutoMapper;
+﻿
 using Busines.Abstraction;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MoviesApp.Dto;
 
@@ -7,7 +8,7 @@ using MoviesApp.Dto;
 
 namespace MoviesApp.Controllers
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MovieController : ControllerBase

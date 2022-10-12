@@ -1,13 +1,14 @@
-﻿using AutoMapper;
+﻿
 using Busines.Abstraction;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MoviesApp.Dto;
-using MoviesApp.Interfaces;
+
 
 
 namespace MoviesApp.Controllers
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReviewerController : Controller
