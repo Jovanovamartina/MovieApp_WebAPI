@@ -55,9 +55,9 @@ namespace Busines.Implementation
             return reviewer;
         }
 
-        public List<ReviewerDto> GetReviewsByReviewer(int reviewerId)
+        public List<ReviewDto> GetReviewsByReviewer(int reviewerId)
         {
-            var reviews = _mapper.Map<List<ReviewerDto>>(_reviewerRepository.GetReviewsByReviewer(reviewerId));
+            var reviews = _mapper.Map<List<ReviewDto>>(_reviewerRepository.GetReviewsByReviewer(reviewerId));
             if (reviews.Count() == 0)
             {
                 throw new Exception("The list is empty");

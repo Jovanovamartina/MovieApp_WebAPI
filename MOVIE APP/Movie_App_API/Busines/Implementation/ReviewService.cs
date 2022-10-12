@@ -75,7 +75,7 @@ namespace Busines.Implementation
 
         public List<ReviewDto> GetReviewsOfaMovie(int movieId)
         {
-            var reviews = _mapper.Map<List<ReviewDto>>(_reviewerRepository.GetReviewsByReviewer(movieId));
+            var reviews = _mapper.Map<List<ReviewDto>>(_reviewRepository.GetReviewsOfAMovie((movieId)));
             if (reviews.Count() == 0)
             {
                 throw new Exception("The list is empty");

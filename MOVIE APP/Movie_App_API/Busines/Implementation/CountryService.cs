@@ -52,10 +52,17 @@ namespace Busines.Implementation
 
         public CountryDto GetCountryByProducer(int producerId)
         {
-            var country = _mapper.Map<CountryDto>(_countryRepository.GetCountryByProducer(producerId)) ?? throw new Exception("no country found");
+            var country = _mapper.Map<CountryDto>(_countryRepository.GetCountryByProducer(producerId));
 
             return country;
         }
+
+        //public ProducerDto GetCountryByProducer(int producerId)
+        //{
+        //    var country = _mapper.Map<ProducerDto>(_countryRepository.GetCountryByProducer(producerId));
+
+        //    return country;
+        //}
 
         public bool Update(CountryDto entity)
         {
